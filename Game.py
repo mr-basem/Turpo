@@ -1,3 +1,10 @@
+import pygame
+import pgzero.game
+import pgzero.runner
+
+pgzero.game.DISPLAY_FLAGS = pygame.SCALED
+pgzero.runner.DISPLAY_FLAGS = pygame.SCALED
+
 import pgzrun
 from pgzero.builtins import keys, music, keyboard
 
@@ -49,7 +56,7 @@ def draw():
         pause_page.draw(screen, music_muted)
     elif play_page.health > 0:
         play_page.draw_game(screen, high_score)
-        screen.draw.text("P = Pause", center=(400, 590), fontsize=24, color=(150, 150, 150))
+        screen.draw.text("P = Pause | F = Fullscreen", center=(400, 590), fontsize=24, color=(150, 150, 150))
     else:
         game_over_page.draw(screen, play_page.score, play_page.coins)
         start_page.draw_home_button(screen)
@@ -79,7 +86,9 @@ def update(dt):
 def on_key_down(key):
     global game_started, paused
 
-    if key == keys.H:
+    if key == keys.F:
+        pygame.display.toggle_fullscreen()
+    elif key == keys.H:
         reset_game(to_home=True)
     elif not game_started and key == keys.SPACE:
         game_started = True
