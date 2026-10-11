@@ -1,6 +1,5 @@
 import random
 from pgzero.actor import Actor
-from sqlalchemy import true
 
 ROAD_SIGNS = {
     "1":  "This sign warns that road construction is taking place.\nSlow down, follow detours or instructions, and watch for workers.",
@@ -35,7 +34,6 @@ def pick_random_sign():
 def reset():
     global current_sign
     current_sign = None
-    music = true
 
 def draw(screen, score, coins):
     if current_sign:

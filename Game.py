@@ -33,9 +33,14 @@ def reset_game(to_home=False):
     game_over_page.reset()
     store.close()
     paused, game_over, makers_open = False, False, False
+    music.stop()
     if to_home:
         game_started = False
-    music.stop()
+    else:
+        game_started = True
+        music.play("game_music")
+        if music_muted:
+            music.set_volume(0)
 
 
 def draw():
@@ -93,6 +98,8 @@ def on_key_down(key):
     elif not game_started and key == keys.SPACE:
         game_started = True
         music.play("game_music")
+        if music_muted:
+            music.set_volume(0)
     elif key in (keys.P, keys.ESCAPE) and play_page.health > 0:
         paused = not paused
         if paused:
