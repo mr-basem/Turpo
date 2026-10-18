@@ -1,6 +1,7 @@
 import pygame
 from pgzero.actor import Actor
 from pgzero.builtins import sounds
+import start_page
 
 SKINS = [
     ("cars/car_red", "Red Racer", 0),
@@ -18,9 +19,17 @@ is_open = False
 selected_skin = "cars/car_red"
 owned_skins = ["cars/car_red"]
 
+# Styling for store navigation button border
+BORDER_COLOR = (255, 215, 0)          # Warm yellow-gold ("أصفر مدي على دهبي")
+BORDER_HOVER_COLOR = (255, 240, 100)  # Slightly brighter on hover
+BORDER_WIDTH = 2
+BORDER_RADIUS = 9
+BUTTON_SIZE = 54
+STORE_RECT = pygame.Rect(110 - BUTTON_SIZE // 2, 50 - BUTTON_SIZE // 2, BUTTON_SIZE, BUTTON_SIZE)
+
 store_button = Actor("icons/store", (110, 50))
-store_button.scale = 0.18
 close_rect = pygame.Rect(740, 20, 40, 40)
+
 
 # Build card UI (id, name, price, rect, preview_actor)
 cards = []
@@ -42,6 +51,11 @@ def close():
     is_open = False
 
 def draw_button(screen=None):
+    if screen is not None:
+        mouse_pos = pygame.mouse.get_pos()
+        color = BORDER_HOVER_COLOR if STORE_RECT.collidepoint(mouse_pos) else BORDER_COLOR
+        # Border only - strictly no background fill as requested
+        pygame.draw.rect(screen.surface, color, STORE_RECT, width=BORDER_WIDTH, border_radius=BORDER_RADIUS)
     store_button.draw()
 
 def draw(screen, coins):
@@ -49,6 +63,9 @@ def draw(screen, coins):
         return
 
     screen.draw.filled_rect(pygame.Rect(0, 0, 800, 600),"#00034D")
+
+    # Home button at top-left with golden-yellow border
+    start_page.draw_home_button(screen)
 
     pygame.draw.circle(screen.surface, "red", (760, 40),20)
     screen.draw.text("X", center=(760, 40), fontsize=24, color="white")
@@ -74,13 +91,13 @@ def draw(screen, coins):
         screen.draw.text(tag, topleft=(rect.x + 85, rect.y + 60), fontsize=20, color=color)
 
 def is_button_clicked(pos):
-    return store_button.collidepoint(pos)
+    return STORE_RECT.collidepoint(pos) or store_button.collidepoint(pos)
 
 def handle_click(pos, coins):
     global selected_skin
     if not is_open:
         return coins
-    if close_rect.collidepoint(pos):
+    if close_rect.collidepoint(pos) or start_page.is_home_clicked(pos):
         close()
         return coins
 

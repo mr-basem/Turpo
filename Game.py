@@ -1,3 +1,12 @@
+import os
+import sys
+
+# Ensure current working directory is the game's directory
+GAME_DIR = os.path.dirname(os.path.abspath(__file__))
+os.chdir(GAME_DIR)
+if GAME_DIR not in sys.path:
+    sys.path.insert(0, GAME_DIR)
+
 import pygame
 import pgzero.game
 import pgzero.runner
@@ -14,6 +23,7 @@ import pause_page
 import game_over_page
 import store
 import makers_page
+import questions_page
 
 # Window size
 WIDTH, HEIGHT = 800, 600
@@ -24,15 +34,16 @@ game_started = False
 paused = False
 game_over = False
 makers_open = False
+quiz_open = False
 music_muted = False
 
 
 def reset_game(to_home=False):
-    global game_started, paused, game_over, makers_open
+    global game_started, paused, game_over, makers_open, quiz_open
     play_page.reset()
     game_over_page.reset()
     store.close()
-    paused, game_over, makers_open = False, False, False
+    paused, game_over, makers_open, quiz_open = False, False, False, False
     music.stop()
     if to_home:
         game_started = False
@@ -43,6 +54,7 @@ def reset_game(to_home=False):
             music.set_volume(0)
 
 
+
 def draw():
     # 1. Road background
     play_page.draw_road(screen)
@@ -51,6 +63,9 @@ def draw():
     if not game_started:
         if makers_open:
             makers_page.draw(screen)
+            start_page.draw_home_button(screen)
+        elif quiz_open:
+            questions_page.draw(screen)
             start_page.draw_home_button(screen)
         else:
             start_page.draw(screen)
@@ -73,6 +88,10 @@ def draw():
 
 def update(dt):
     global high_score, game_over
+    if quiz_open:
+        questions_page.update(dt)
+        return
+
     if not game_started or paused:
         return
 
@@ -89,17 +108,25 @@ def update(dt):
 
 
 def on_key_down(key):
-    global game_started, paused
+    global game_started, paused, quiz_open
 
     if key == keys.F:
         pygame.display.toggle_fullscreen()
     elif key == keys.H:
         reset_game(to_home=True)
+    elif key == keys.Q and not game_started and not store.is_open:
+        quiz_open = not quiz_open
+    elif quiz_open:
+        res = questions_page.on_key_down(key)
+        if res == "home":
+            quiz_open = False
     elif not game_started and key == keys.SPACE:
         game_started = True
         music.play("game_music")
         if music_muted:
             music.set_volume(0)
+    elif key == keys.ESCAPE and store.is_open:
+        store.close()
     elif key in (keys.P, keys.ESCAPE) and play_page.health > 0:
         paused = not paused
         if paused:
@@ -111,7 +138,7 @@ def on_key_down(key):
 
 
 def on_mouse_down(pos):
-    global makers_open, music_muted
+    global makers_open, music_muted, quiz_open
 
     if store.is_open:
         play_page.coins = store.handle_click(pos, play_page.coins)
@@ -121,10 +148,22 @@ def on_mouse_down(pos):
             if start_page.is_home_clicked(pos):
                 makers_open = False
             return
+        if quiz_open:
+            if start_page.is_home_clicked(pos):
+                quiz_open = False
+                return
+            res = questions_page.handle_click(pos)
+            if res and res.get("action") == "home":
+                quiz_open = False
+            elif res and res.get("correct"):
+                play_page.coins += 1
+            return
         if start_page.is_home_clicked(pos):
             reset_game(to_home=True)
         elif start_page.is_makers_clicked(pos):
             makers_open = True
+        elif start_page.is_quiz_clicked(pos):
+            quiz_open = True
         elif store.is_button_clicked(pos):
             store.toggle()
     elif paused and pause_page.is_volume_clicked(pos):
@@ -134,6 +173,7 @@ def on_mouse_down(pos):
         reset_game(to_home=True)
     elif store.is_button_clicked(pos):
         store.toggle()
+
 
 
 pgzrun.go()
