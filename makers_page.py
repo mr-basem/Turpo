@@ -5,10 +5,10 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Default makers list: (filename, person_name)
 DEFAULT_MAKERS = [
-    ("Yousef Hussein.jpg", "Yousef Hussein"),
     ("Ali Mahrous.jpeg", "Ali Mahrous"),
-    ("Yousef Sheta.jpeg", "Yousef Sheta"),
     ("Jomana Ahmad.png", "Jomana Ahmad"),
+    ("Yousef Hussein.jpg", "Yousef Hussein"),
+    ("Yousef Sheta.jpeg", "Yousef Sheta"),
 ]
 
 maker_images = [img for img, _ in DEFAULT_MAKERS]

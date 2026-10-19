@@ -39,7 +39,8 @@ def draw(screen):
     draw_home_button(screen)
     draw_makers_button(screen)
     draw_quiz_button(screen)
-    screen.draw.text("Press SPACE to Start", center=(400, 525), fontsize=48, color="white")
+    screen.draw.text("Play to Learn • Drive to Live!", center=(400, 465), fontsize=26, color="gold")
+    screen.draw.text("Press SPACE to Start", center=(400, 520), fontsize=46, color="white")
     screen.draw.text("Press Q or Click Quiz for Traffic Signs Quiz", center=(400, 565), fontsize=22, color="cyan")
 
 
