@@ -64,16 +64,20 @@ html {
   background-color: var(--bg-deep);
   color: var(--text-primary);
   font-family: var(--font-body);
-  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden !important;
   -webkit-font-smoothing: antialiased;
 }
 
 body {
   background: radial-gradient(circle at 50% 20%, #111827 0%, var(--bg-deep) 70%);
   min-height: 100vh;
+  width: 100%;
+  max-width: 100%;
   line-height: 1.6;
   position: relative;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
 /* Background Animated Road Grid */
@@ -385,17 +389,48 @@ body {
    VERTICAL FULL-SCREEN SLIDES CONTAINER
    ========================================================================== */
 .presentation-container {
-  width: 100vw;
+  width: 100%;
+  max-width: 100%;
   height: 100vh;
   overflow-y: scroll;
+  overflow-x: hidden !important;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   position: relative;
   z-index: 2;
+  box-sizing: border-box;
+}
+
+/* Disallow any horizontal scrollbar */
+.presentation-container::-webkit-scrollbar:horizontal,
+html::-webkit-scrollbar:horizontal,
+body::-webkit-scrollbar:horizontal {
+  display: none !important;
+  height: 0 !important;
+  width: 0 !important;
+}
+
+/* Custom sleek vertical scrollbar */
+.presentation-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.presentation-container::-webkit-scrollbar-track {
+  background: rgba(7, 9, 14, 0.95);
+}
+
+.presentation-container::-webkit-scrollbar-thumb {
+  background: rgba(255, 215, 0, 0.35);
+  border-radius: 4px;
+}
+
+.presentation-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 215, 0, 0.65);
 }
 
 .slide-section {
-  width: 100vw;
+  width: 100%;
+  max-width: 100%;
   min-height: 100vh;
   height: 100vh;
   scroll-snap-align: start;
@@ -406,7 +441,9 @@ body {
   align-items: center;
   padding: 84px 44px 34px;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden !important;
+  overflow-y: hidden;
+  box-sizing: border-box;
 }
 
 .slide-inner {
