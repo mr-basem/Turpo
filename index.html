@@ -1,0 +1,1640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Turbo Game — Interactive Presentation | Afro-Asian Forum 2026</title>
+  <meta name="description" content="Official interactive presentation for Turbo Game at Afro-Asian Forum, Aswan 2026. Presented by Ali Mahrous & Jomana Ahmad.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="assets/logos/game-icon.ico">
+</head>
+<body>
+
+  <!-- Ambient Road Background Graphics -->
+  <div class="bg-ambient-layer" aria-hidden="true"></div>
+  <div class="bg-road-dashes-left" aria-hidden="true"></div>
+  <div class="bg-road-dashes-right" aria-hidden="true"></div>
+
+  <!-- Global Progress Bar at Top -->
+  <div class="global-progress-track">
+    <div class="global-progress-bar" id="globalProgressBar"></div>
+  </div>
+
+  <!-- Top Floating Header Bar -->
+  <header class="pres-header">
+    <div class="brand-section">
+      <img src="assets/logos/logo-game.png" alt="Turbo Game Logo" class="header-logo-img">
+      <span class="brand-text">TURBO <span class="brand-badge">GAME</span></span>
+    </div>
+
+    <div class="header-center-info">
+      <div class="forum-tag">
+        <span class="forum-tag-dot"></span>
+        <span>Afro-Asian Forum • Aswan 2026</span>
+      </div>
+      <div class="header-slogan-pill">
+        <span>“Play to Learn • Drive to Live!”</span>
+      </div>
+    </div>
+
+    <div class="header-controls">
+      <span class="slide-counter-badge" id="slideCounter">01 / 20</span>
+      <button class="btn-ctrl" onclick="goToSlide(3)" style="color: var(--gold-primary); border-color: var(--border-gold);" title="Watch Promo Video">▶ Video</button>
+      <button class="btn-ctrl" id="prevSlideBtn" title="Previous Slide (Up Arrow)">▲ Prev</button>
+      <button class="btn-ctrl" id="nextSlideBtn" title="Next Slide (Down Arrow / Space)">▼ Next</button>
+      <button class="btn-ctrl" id="jumpMenuBtn" title="Jump to Slide (M / J)">☰ Menu</button>
+      <button class="btn-ctrl" id="fullscreenBtn" title="Toggle Fullscreen (F)">⛶ Fullscreen</button>
+    </div>
+  </header>
+
+  <!-- Right Side Dot Navigation -->
+  <nav class="slide-dot-nav" id="slideDotNav" aria-label="Slide quick navigation"></nav>
+
+  <!-- Bottom Floating Navigation Arrows & Keyboard Hint -->
+  <div class="pres-bottom-controls">
+    <button class="nav-arrow-btn" id="bottomTopBtn" title="Return to Cover Slide">⏮</button>
+    <button class="nav-arrow-btn" id="bottomPrevBtn" title="Previous Slide">▲</button>
+    <button class="nav-arrow-btn" id="bottomNextBtn" title="Next Slide">▼</button>
+  </div>
+
+  <div class="keyboard-hint-pill">
+    <span>Keys: <kbd>↑</kbd><kbd>↓</kbd> or <kbd>Space</kbd> Nav • <kbd>F</kbd> Fullscreen • <kbd>M</kbd> Menu • <kbd>Esc</kbd> Close</span>
+  </div>
+
+  <!-- ========================================================================
+       MAIN PRESENTATION CONTAINER (18 VERTICAL FULL-SCREEN SLIDES)
+       ======================================================================== -->
+  <main class="presentation-container" id="presentationContainer">
+
+    <!-- --------------------------------------------------------------------
+         SLIDE 1: COVER
+         -------------------------------------------------------------------- -->
+    <section class="slide-section" id="slide-1" data-title="Cover">
+      <div class="slide-inner">
+        <div class="cover-layout">
+          <div class="cover-text-column">
+            <div class="cover-badge-row">
+              <span class="cover-tag">Competition Pitch</span>
+              <span class="cover-forum-tag">Afro-Asian Youth Forum 2026 — Aswan, Egypt</span>
+            </div>
+
+            <h1 class="cover-main-title">
+              TURBO <span>GAME</span>
+            </h1>
+
+            <div class="cover-slogan-box">
+              <span class="slogan-badge">OFFICIAL SLOGAN • شعار المشروع</span>
+              <div class="slogan-quote">“Play to Learn, Drive to Live!”</div>
+              <div class="slogan-arabic">«العب لتتعلّم • قُد لتسلَم»</div>
+            </div>
+
+            <p class="cover-desc">
+              Our game is called <strong>Turbo</strong>. A teenager we know had an accident because he didn't know road signs. So, we made a fun car game to teach road signs and save lives!
+            </p>
+
+            <div class="cover-presenters-card">
+              <div class="cover-avatar-group">
+                <img src="assets/team/ali-mahrous.jpeg" alt="Ali Mahrous" class="cover-avatar-img">
+                <img src="assets/team/jomana-ahmad.png" alt="Jomana Ahmad" class="cover-avatar-img">
+              </div>
+              <div>
+                <div class="cover-presenter-names">Ali Mahrous & Jomana Ahmad <span class="ar-subname">(علي محروس & جمانة أحمد)</span></div>
+                <div class="cover-presenter-sub">Presenters on behalf of the 4-student development team • Kafr El Sheikh, Egypt</div>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 14px; align-items: center; flex-wrap: wrap;">
+              <button class="cta-start-btn" id="startPresentationBtn">
+                <span>START PRESENTATION</span>
+                <span>➔</span>
+              </button>
+              <button class="btn-ctrl" onclick="goToSlide(3)" style="padding: 14px 22px; font-size: 0.95rem; background: rgba(255,215,0,0.15); border: 1.5px solid var(--border-gold); color: var(--gold-primary); font-weight: 700;">
+                <span>▶ WATCH PROMO VIDEO</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="cover-visual-column">
+            <div class="cover-mockup-frame" onclick="openScreenshotLightbox('assets/screenshots/main-menu.png', 'Turbo Game — Main Start Menu')">
+              <img src="assets/screenshots/main-menu.png" alt="Turbo Game Start Menu Screenshot" class="cover-mockup-img">
+              <div class="cover-floating-badge">
+                <img src="assets/logos/logo-game.png" alt="Logo" style="height: 24px;">
+                <span style="font-size: 0.85rem; font-weight: 700; color: var(--gold-primary);">Verified Pygame Build</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------
+         SLIDE 2: MEET THE PRESENTERS AND TEAM
+         -------------------------------------------------------------------- -->
+    <section class="slide-section" id="slide-2" data-title="The Team">
+      <div class="slide-inner">
+        <div class="slide-header">
+          <div class="slide-pretitle">Our Team • فريق العمل</div>
+          <h2 class="slide-title">Meet Our Team from Kafr El Sheikh</h2>
+          <p class="slide-subtitle">Four 15-year-old students using Python to teach road safety and save lives.</p>
+        </div>
+
+        <div class="team-stacked-container">
+
+          <!-- LINE 1: PRESENTERS (Ali & Jomana only) -->
+          <div class="team-tier-section presenters-tier">
+            <div class="team-tier-header">
+              <div class="tier-title-group">
+                <span class="tier-tag tier-tag-gold">🎤 Official Presenters Only • وفد التقديم الرسمي</span>
+                <span class="tier-sub">Presenting live to the Judges & Audience at Afro-Asian Forum 2026</span>
+              </div>
+            </div>
+
+            <div class="team-tier-grid">
+              <!-- Presenter 1: Ali Mahrous -->
+              <div class="member-horizontal-card">
+                <div class="member-card-photo">
+                  <img src="assets/team/ali-mahrous.jpeg" alt="Ali Mahrous">
+                </div>
+                <div class="member-card-info">
+                  <div class="member-card-name">Ali Mahrous</div>
+                  <div class="member-card-arabic">علي محروس</div>
+                  <span class="member-role-badge role-badge-presenter">🎤 Presenter & Pitch Lead</span>
+                </div>
+              </div>
+
+              <!-- Presenter 2: Jomana Ahmad -->
+              <div class="member-horizontal-card">
+                <div class="member-card-photo">
+                  <img src="assets/team/jomana-ahmad.png" alt="Jomana Ahmad">
+                </div>
+                <div class="member-card-info">
+                  <div class="member-card-name">Jomana Ahmad</div>
+                  <div class="member-card-arabic">جمانة أحمد</div>
+                  <span class="member-role-badge role-badge-presenter">🎤 Presenter & Safety Lead</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- LINE 2: IN LINE UNDER ALI & JOMANA (Yousef Hussein & Yousef Sheta) -->
+          <div class="team-tier-section developers-tier">
+            <div class="team-tier-header">
+              <div class="tier-title-group">
+                <span class="tier-tag tier-tag-blue">💻 Game Developers & Designers • فريق البرمجة والتصميم</span>
+                <span class="tier-sub">In line under presenters • Built the Python code, 6 roads, sounds & shop</span>
+              </div>
+            </div>
+
+            <div class="team-tier-grid">
+              <!-- Developer 1: Yousef Hussein (Under Ali Mahrous) -->
+              <div class="member-horizontal-card">
+                <div class="member-card-photo">
+                  <img src="assets/team/yousef-hussein.jpg" alt="Yousef Hussein">
+                </div>
+                <div class="member-card-info">
+                  <div class="member-card-name">Yousef Hussein</div>
+                  <div class="member-card-arabic">يوسف حسين</div>
+                  <span class="member-role-badge role-badge-developer">💻 Game Code & Physics</span>
+                </div>
+              </div>
+
+              <!-- Developer 2: Yousef Sheta (Under Jomana Ahmad) -->
+              <div class="member-horizontal-card">
+                <div class="member-card-photo">
+                  <img src="assets/team/yousef-sheta.jpeg" alt="Yousef Sheta">
+                </div>
+                <div class="member-card-info">
+                  <div class="member-card-name">Yousef Sheta</div>
+                  <div class="member-card-arabic">يوسف شتة</div>
+                  <span class="member-role-badge role-badge-developer">🎨 Game Graphics & Road Art</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- BOTTOM STATS STRIP -->
+          <div class="team-footer-strip">
+            <div class="team-stats-mini">
+              <div class="stat-box-mini">
+                <span class="stat-num">15</span>
+                <span class="stat-lbl">Our Age (سنة)</span>
+              </div>
+              <div class="stat-box-mini">
+                <span class="stat-num">4</span>
+                <span class="stat-lbl">Students (طلاب)</span>
+              </div>
+              <div class="stat-box-mini">
+                <span class="stat-num">100%</span>
+                <span class="stat-lbl">Student Code (برمجة)</span>
+              </div>
+            </div>
+            <div class="team-quote-compact">
+              “A teenager we know had an accident over a road sign. We built Turbo so no more kids get hurt on our streets.”
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------
+         SLIDE 3: THE PROBLEM & ORIGIN STORY
+         -------------------------------------------------------------------- -->
+    <section class="slide-section" id="slide-3" data-title="Problem & Story">
+      <div class="slide-inner">
+        <div class="slide-header">
+          <div class="slide-pretitle">Origin & Mission • قصة البداية والمشكلة</div>
+          <h2 class="slide-title">Why We Built Turbo: From an Accident to a Solution</h2>
+          <p class="slide-subtitle">A real accident in our city inspired our 4-student team to take action and save lives.</p>
+        </div>
+
+        <div class="origin-layout">
+          <div class="origin-narrative-box">
+            <div class="origin-location-pill">
+              <span>📍 Stadium Street, Kafr El Sheikh, Egypt • شارع الاستاد، كفر الشيخ</span>
+            </div>
+
+            <p style="font-size: 1.15rem; color: var(--text-primary); line-height: 1.7;">
+              A teenager we know had a car accident because he didn't know the road sign. We felt heartbroken, but we didn't just feel sad—we decided to use our coding skills to solve the problem!
+            </p>
+
+            <div class="origin-quote-block">
+              <div class="origin-quote-text">
+                “Driving books are boring and kids don't read them. Video games make learning fast, active, and fun!”
+              </div>
+            </div>
+
+            <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.6;">
+              Driving lessons start at age 18, but teenagers cross busy roads, ride bikes, and walk near fast cars every single day. They need road knowledge right now!
+            </p>
+          </div>
+
+          <div class="origin-triad-flow">
+            <div class="triad-step">
+              <div class="triad-num">1</div>
+              <div>
+                <h4 style="color: #fff; font-size: 1.15rem;">Age 18 Is Too Late</h4>
+                <p style="color: var(--text-secondary); font-size: 0.95rem;">Driving schools wait until age 18. But kids cross dangerous streets every day.</p>
+              </div>
+            </div>
+
+            <div class="triad-step">
+              <div class="triad-num">2</div>
+              <div>
+                <h4 style="color: #fff; font-size: 1.15rem;">Books Are Boring</h4>
+                <p style="color: var(--text-secondary); font-size: 0.95rem;">Kids don't read 100-page booklets. Games turn road rules into fast muscle memory!</p>
+              </div>
+            </div>
+
+            <div class="triad-step">
+              <div class="triad-num">3</div>
+              <div>
+                <h4 style="color: #fff; font-size: 1.15rem;">Our Free Solution: Turbo</h4>
+                <p style="color: var(--text-secondary); font-size: 0.95rem;">A 100% free car game that runs smoothly on any simple school computer or laptop.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------
+         SLIDE 4: OFFICIAL PROMO VIDEO
+         -------------------------------------------------------------------- -->
+    <section class="slide-section" id="slide-4" data-title="Promo Video">
+      <div class="slide-inner">
+        <div class="slide-header">
+          <div class="slide-pretitle">Official Video • الفيديو الترويجي الرسمي للمشروع</div>
+          <h2 class="slide-title">Watch Turbo in Action!</h2>
+          <p class="slide-subtitle">See how our car game turns real road signs into a fun, life-saving game for kids!</p>
+        </div>
+
+        <div class="promo-video-layout">
+          <!-- Video Cinema Box -->
+          <div class="video-cinema-frame">
+            <video id="promoVideoPlayer" controls playsinline preload="metadata" class="main-promo-video">
+              <source src="assets/videos/promo-video.mp4" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
+          </div>
+
+          <!-- Video Details & Highlights Column -->
+          <div class="video-sidebar-card">
+            <div class="video-card-header">
+              <span class="video-tag-pill">ROAD SAFETY CAMPAIGN</span>
+              <span class="page-code-tag">HD Video • MP4</span>
+            </div>
+
+            <h3 style="font-family: var(--font-display); font-size: 1.25rem; color: #fff; margin-bottom: 4px;">
+              “Play to Learn, Drive to Live!”
+            </h3>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.45; margin-bottom: 10px;">
+              Made by our 4-student team to keep kids and teenagers safe on busy streets.
+            </p>
+
+            <div class="topics-list">
+              <div class="topic-item">
+                <span class="topic-icon">🚦</span>
+                <div class="topic-content">
+                  <div class="topic-title">Real Street Dangers</div>
+                  <div class="topic-desc">Shows the risks kids face every day walking or biking across city roads.</div>
+                </div>
+              </div>
+
+              <div class="topic-item">
+                <span class="topic-icon">🛑</span>
+                <div class="topic-content">
+                  <div class="topic-title">Important Road Signs</div>
+                  <div class="topic-desc">Teaches STOP, School Zone, Speed Hump, and Slippery Road rules.</div>
+                </div>
+              </div>
+
+              <div class="topic-item">
+                <span class="topic-icon">🎮</span>
+                <div class="topic-content">
+                  <div class="topic-title">Fast Learning Through Play</div>
+                  <div class="topic-desc">Proves why fast reflexes in a game beat reading 100 pages of boring rules.</div>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top: 8px; display: flex; gap: 10px;">
+              <button class="btn-ctrl" onclick="togglePlayPromoVideo()" style="flex: 1; padding: 10px 14px; justify-content: center; background: rgba(255,215,0,0.15); border-color: var(--gold-primary); color: var(--gold-primary); font-weight: 700;">
+                <span id="videoPlayBtnText">▶ PLAY / PAUSE</span>
+              </button>
+              <button class="btn-ctrl" onclick="toggleFullscreenPromoVideo()" style="padding: 10px 14px; justify-content: center;">
+                <span>⛶ FULLSCREEN</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------
+         SLIDE 5: THE 7 GAME PAGES OVERVIEW
+         -------------------------------------------------------------------- -->
+    <section class="slide-section" id="slide-5" data-title="7 Pages Overview">
+      <div class="slide-inner">
+        <div class="slide-header">
+          <div class="slide-pretitle">Game Structure • صفحات وشاشات اللعبة</div>
+          <h2 class="slide-title">The 7 Screens of Turbo Game</h2>
+          <p class="slide-subtitle">We coded all 7 screens ourselves using Python and Pygame. Click any screen to see it!</p>
+        </div>
+
+        <div class="game-pages-overview-grid">
+          <div class="page-overview-card" onclick="goToSlide(5)">
+            <div class="page-overview-thumb">
+              <img src="assets/screenshots/main-menu.png" alt="Start Menu">
+            </div>
+            <div class="page-code-tag">start_page.py</div>
+            <div class="page-overview-title">1. Start Screen</div>
+            <div class="page-overview-desc">Big Turbo logo, hit Space to race, check high score, or visit Shop and Quiz.</div>
+          </div>
+
+          <div class="page-overview-card" onclick="goToSlide(6)">
+            <div class="page-overview-thumb">
+              <img src="assets/screenshots/gameplay.png" alt="Play Screen">
+            </div>
+            <div class="page-code-tag">play_page.py</div>
+            <div class="page-overview-title">2. Play Screen</div>
+            <div class="page-overview-desc">Drive on 6 lanes, dodge traffic cars, grab coins, and protect your 3 hearts.</div>
+          </div>
+
+          <div class="page-overview-card" onclick="goToSlide(7)">
+            <div class="page-overview-thumb">
+              <img src="assets/screenshots/traffic-quiz.png" alt="Traffic Quiz">
+            </div>
+            <div class="page-code-tag">questions_page.py</div>
+            <div class="page-overview-title">3. Traffic Quiz</div>
+            <div class="page-overview-desc">20 real road signs, 4 easy choices, and win gold coins for right answers.</div>
+          </div>
+
+          <div class="page-overview-card" onclick="goToSlide(8)">
+            <div class="page-overview-thumb">
+              <img src="assets/screenshots/car-shop.png" alt="Car Store">
+            </div>
+            <div class="page-code-tag">store.py</div>
+            <div class="page-overview-title">4. Car Store</div>
+            <div class="page-overview-desc">9 awesome cars to unlock with coins—including Ferrari and Formula 1!</div>
+          </div>
+
+          <div class="page-overview-card" onclick="goToSlide(9)">
+            <div class="page-overview-thumb">
+              <img src="assets/screenshots/game-over.png" alt="Game Over">
+            </div>
+            <div class="page-code-tag">game_over_page.py</div>
+            <div class="page-overview-title">5. Game Over</div>
+            <div class="page-overview-desc">When you crash, you see a real road sign and learn its safety rule!</div>
+          </div>
+
+          <div class="page-overview-card" onclick="goToSlide(10)">
+            <div class="page-overview-thumb">
+              <img src="assets/screenshots/pause-screen.png" alt="Pause Screen">
+            </div>
+            <div class="page-code-tag">pause_page.py</div>
+            <div class="page-overview-title">6. Pause & Sound</div>
+            <div class="page-overview-desc">Freeze the game anytime or press M to turn sounds on and off.</div>
+          </div>
+
+          <div class="page-overview-card" onclick="goToSlide(11)">
+            <div class="page-overview-thumb">
+              <img src="assets/screenshots/makers-screen.png" alt="Makers Screen">
+            </div>
+            <div class="page-code-tag">makers_page.py</div>
+            <div class="page-overview-title">7. Game Makers</div>
+            <div class="page-overview-desc">Meet our 4 student developers from Kafr El Sheikh, Egypt.</div>
+          </div>
+
+          <div class="page-overview-card" style="border-color: var(--cyan-accent); background: rgba(6,182,212,0.08);" onclick="goToSlide(16)">
+            <div class="page-overview-thumb" style="display: flex; align-items: center; justify-content: center; background: rgba(6,182,212,0.15);">
+              <span style="font-size: 2.2rem;">📦</span>
+            </div>
+            <div class="page-code-tag" style="color: var(--gold-primary); border-color: var(--gold-primary);">Turpo.exe</div>
+            <div class="page-overview-title">Windows EXE</div>
+            <div class="page-overview-desc">One 60 MB file that runs on any school PC with a double-click—no internet needed!</div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------
+         SLIDE 6: PAGE 1 — START SCREEN & MAIN MENU
+         -------------------------------------------------------------------- -->
+    <section class="slide-section" id="slide-6" data-title="Page 1: Start Menu">
+      <div class="slide-inner">
+        <div class="slide-header">
+          <div class="slide-pretitle">Page 1 / 7 • شاشة البداية الرئيسية</div>
+          <h2 class="slide-title">Page 1: Start Screen & Launch Menu</h2>
+          <p class="slide-subtitle">The main screen where players start racing, check scores, or open the shop and quiz.</p>
+        </div>
+
+        <div class="page-detail-layout">
+          <div class="page-preview-column">
+            <div class="page-mockup-frame" onclick="openScreenshotLightbox('assets/screenshots/main-menu.png', 'Start Screen & Main Menu Interface')">
+              <img src="assets/screenshots/main-menu.png" alt="Start Screen Menu" class="page-mockup-img">
+              <div class="page-mockup-badge">
+                <span>⚡ start_page.py • 60 FPS</span>
+              </div>
+            </div>
+            <div style="font-size: 0.88rem; color: var(--gold-hover); text-align: center; font-weight: 600;">
+              ▲ Click screenshot to inspect full resolution in lightbox
+            </div>
+          </div>
+
+          <div class="page-topics-card">
+            <div class="page-header-row">
+              <h3 style="font-family: var(--font-display); font-size: 1.35rem; color: #fff;">Topics Covered on Page 1:</h3>
+              <span class="page-code-tag">Module: start_page.py</span>
+            </div>
+
+            <div class="topics-list">
+              <div class="topic-item">
+                <span class="topic-icon">🏎️</span>
+                <div class="topic-content">
+                  <div class="topic-title">Animated Turbo Logo</div>
+                  <div class="topic-desc">A bright, welcoming Turbo logo made by our student team.</div>
+                </div>
+              </div>
+
+              <div class="topic-item">
+                <span class="topic-icon">🚀</span>
+                <div class="topic-content">
+                  <div class="topic-title">Press SPACE to Race</div>
+                  <div class="topic-desc">Just hit the Spacebar to start racing immediately!</div>
+                </div>
+              </div>
+
+              <div class="topic-item">
+                <span class="topic-icon">🔘</span>
+                <div class="topic-content">
+                  <div class="topic-title">3 Quick Menu Buttons</div>
+                  <div class="topic-desc">Easy buttons to visit Home, the Car Shop, or the Traffic Quiz.</div>
+                </div>
+              </div>
+
+              <div class="topic-item">
+                <span class="topic-icon">🏆</span>
+                <div class="topic-content">
+                  <div class="topic-title">Best Score & Slogan</div>
+                  <div class="topic-desc">Displays all-time high score and our motto: “Play to Learn • Drive to Live!”.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------
+         SLIDE 7: PAGE 2 — PLAY SCREEN & RACE ACTION
+         -------------------------------------------------------------------- -->
+    <section class="slide-section" id="slide-7" data-title="Page 2: Play Screen">
+      <div class="slide-inner">
+        <div class="slide-header">
+          <div class="slide-pretitle">Page 2 / 7 • شاشة السباق واللعب</div>
+          <h2 class="slide-title">Page 2: Play Screen & Live Race</h2>
+          <p class="slide-subtitle">Fast car racing, traffic dodging, and gold coin collecting.</p>
+        </div>
+
+        <div class="page-detail-layout">
+          <div class="page-preview-column">
+            <div class="page-mockup-frame" onclick="openScreenshotLightbox('assets/screenshots/gameplay.png', 'Play Screen: Active Race and Live HUD')">
+              <img src="assets/screenshots/gameplay.png" alt="Play Screen" class="page-mockup-img">
+              <div class="page-mockup-badge">
+                <span>🎮 play_page.py • 6 Lanes Active</span>
+              </div>
+            </div>
+            <div style="font-size: 0.88rem; color: var(--gold-hover); text-align: center; font-weight: 600;">
+              ▲ Click screenshot to inspect full resolution in lightbox
+            </div>
+          </div>
+
+          <div class="page-topics-card">
+            <div class="page-header-row">
+              <h3 style="font-family: var(--font-display); font-size: 1.35rem; color: #fff;">Topics Covered on Page 2:</h3>
+              <span class="page-code-tag">Modules: play_page.py + Game.py</span>
+            </div>
+
+            <div class="topics-list">
+              <div class="topic-item">
+                <span class="topic-icon">🏎️</span>
+                <div class="topic-content">
+                  <div class="topic-title">Easy Steering (← / → or A / D)</div>
+                  <div class="topic-desc">Smooth car steering across 6 lanes to dodge oncoming traffic.</div>
+                </div>
+              </div>
+
+              <div class="topic-item">
+                <span class="topic-icon">📊</span>
+                <div class="topic-content">
+                  <div class="topic-title">Live Game Screen</div>
+                  <div class="topic-desc">Shows your score, car speed, 3 health hearts, and collected coins.</div>
+                </div>
+              </div>
+
+              <div class="topic-item">
+                <span class="topic-icon">🚗</span>
+                <div class="topic-content">
+                  <div class="topic-title">Opposing Traffic Cars</div>
+                  <div class="topic-desc">Random cars come down the highway at different speeds. Dodge them!</div>
+                </div>
+              </div>
+
+              <div class="topic-item">
+                <span class="topic-icon">💥</span>
+                <div class="topic-content">
+                  <div class="topic-title">1-Second Safe Mode</div>
+                  <div class="topic-desc">When you hit a car, you lose 1 heart and flash for 1 second to escape safely.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------
+         SLIDE 8: PAGE 3 — TRAFFIC SIGNS QUIZ SCREEN
+         -------------------------------------------------------------------- -->
+    <section class="slide-section" id="slide-8" data-title="Page 3: Traffic Quiz">
+      <div class="slide-inner">
+        <div class="slide-header">
+          <div class="slide-pretitle">Page 3 / 7 • شاشة اختبار إشارات المرور</div>
+          <h2 class="slide-title">Page 3: Traffic Signs Quiz</h2>
+          <p class="slide-subtitle">A fun quiz with 20 real road signs to test what kids learned.</p>
+        </div>
+
+        <div class="page-detail-layout">
+          <div class="page-preview-column">
+            <div class="page-mockup-frame" onclick="openScreenshotLightbox('assets/screenshots/traffic-quiz.png', 'Traffic Signs Quiz Screen')">
+              <img src="assets/screenshots/traffic-quiz.png" alt="Traffic Quiz Screen" class="page-mockup-img">
+              <div class="page-mockup-badge">
+                <span>🛑 questions_page.py • 20 Real Signs</span>
+              </div>
+            </div>
+            <div style="font-size: 0.88rem; color: var(--gold-hover); text-align: center; font-weight: 600;">
+              ▲ Click screenshot to inspect full resolution in lightbox
+            </div>
+          </div>
+
+          <div class="page-topics-card">
+            <div class="page-header-row">
+              <h3 style="font-family: var(--font-display); font-size: 1.35rem; color: #fff;">Topics Covered on Page 3:</h3>
+              <span class="page-code-tag">Module: questions_page.py</span>
+            </div>
+
+            <div class="topics-list">
+              <div class="topic-item">
+                <span class="topic-icon">🛑</span>
+                <div class="topic-content">
+                  <div class="topic-title">20 Real Road Signs</div>
+                  <div class="topic-desc">Official signs kids see on streets every day (Warning, Stop, School Zone).</div>
+                </div>
+              </div>
+
+              <div class="topic-item">
+                <span class="topic-icon">🔠</span>
+                <div class="topic-content">
+                  <div class="topic-title">4 Multiple-Choice Buttons</div>
+                  <div class="topic-desc">Click the right answer easily with your mouse or keyboard.</div>
+                </div>
+              </div>
+
+              <div class="topic-item">
+                <span class="topic-icon">✅</span>
+                <div class="topic-content">
+                  <div class="topic-title">Instant Learning</div>
+                  <div class="topic-desc">Turns green for right answers, or shows the correct safety rule if wrong.</div>
+                </div>
+              </div>
+
+              <div class="topic-item">
+                <span class="topic-icon">💰</span>
+                <div class="topic-content">
+                  <div class="topic-title">Gold Coin Rewards</div>
+                  <div class="topic-desc">Earn +1 gold coin for every right answer to buy cool cars!</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------
+         SLIDE 9: PAGE 4 — CAR STORE & GARAGE
+         -------------------------------------------------------------------- -->
+    <section class="slide-section" id="slide-9" data-title="Page 4: Car Store">
+      <div class="slide-inner">
+        <div class="slide-header">
+          <div class="slide-pretitle">Page 4 / 7 • متجر وكراج السيارات</div>
+          <h2 class="slide-title">Page 4: Car Store & Garage</h2>
+          <p class="slide-subtitle">Spend coins earned from racing or quizzes to unlock new cars!</p>
+        </div>
+
+        <div class="page-detail-layout">
+          <div class="page-preview-column">
+            <div class="page-mockup-frame" onclick="openScreenshotLightbox('assets/screenshots/car-shop.png', 'Car Store & Garage Interface')">
+              <img src="assets/screenshots/car-shop.png" alt="Car Store Screen" class="page-mockup-img">
+              <div class="page-mockup-badge">
+                <span>🚗 store.py • 9 Unlockable Cars</span>
+              </div>
+            </div>
+            <div style="font-size: 0.88rem; color: var(--gold-hover); text-align: center; font-weight: 600;">
+              ▲ Click screenshot to inspect full resolution in lightbox
+            </div>
+          </div>
+
+          <div class="page-topics-card">
+            <div class="page-header-row">
+              <h3 style="font-family: var(--font-display); font-size: 1.35rem; color: #fff;">Topics Covered on Page 4:</h3>
+              <span class="page-code-tag">Module: store.py</span>
+            </div>
+
+            <div class="topics-list">
+              <div class="topic-item">
+                <span class="topic-icon">🚘</span>
+                <div class="topic-content">
+                  <div class="topic-title">9 Awesome Cars</div>
+                  <div class="topic-desc">Red Racer, Beach Buggy, Super Ferrari, Formula 1, Truck, and the Golden Car!</div>
+                </div>
+              </div>
+
+              <div class="topic-item">
+                <span class="topic-icon">🪙</span>
+                <div class="topic-content">
+                  <div class="topic-title">100% Free - No Real Money</div>
+                  <div class="topic-desc">Cars cost 0 to 50 game coins. Completely safe and free for all kids.</div>
+                </div>
+              </div>
+
+              <div class="topic-item">
+                <span class="topic-icon">👆</span>
+                <div class="topic-content">
+                  <div class="topic-title">Click to Drive</div>
+                  <div class="topic-desc">Click any car you own to choose it for your next race.</div>
+                </div>
+              </div>
+
+              <div class="topic-item">
+                <span class="topic-icon">💾</span>
+                <div class="topic-content">
+                  <div class="topic-title">Progress Saved</div>
+                  <div class="topic-desc">Your coins and unlocked cars stay saved when you play again.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------
+         SLIDE 10: PAGE 5 — GAME OVER & ROAD SAFETY MOMENT
+         -------------------------------------------------------------------- -->
+    <section class="slide-section" id="slide-10" data-title="Page 5: Game Over">
+      <div class="slide-inner">
+        <div class="slide-header">
+          <div class="slide-pretitle">Page 5 / 7 • شاشة نهاية اللعبة والتعليم</div>
+          <h2 class="slide-title">Page 5: Game Over & Road Safety Lesson</h2>
+          <p class="slide-subtitle">Turning a game crash into a life-saving lesson.</p>
+        </div>
+
+        <div class="page-detail-layout">
+          <div class="page-preview-column">
+            <div class="page-mockup-frame" onclick="openScreenshotLightbox('assets/screenshots/game-over.png', 'Game Over Screen with Road Safety Sign Lesson')">
+              <img src="assets/screenshots/game-over.png" alt="Game Over Screen" class="page-mockup-img">
+              <div class="page-mockup-badge">
+                <span>🎓 game_over_page.py • Safety Flash</span>
+              </div>
+            </div>
+            <div style="font-size: 0.88rem; color: var(--gold-hover); text-align: center; font-weight: 600;">
+              ▲ Click screenshot to inspect full resolution in lightbox
+            </div>
+          </div>
+
+          <div class="page-topics-card">
+            <div class="page-header-row">
+              <h3 style="font-family: var(--font-display); font-size: 1.35rem; color: #fff;">Topics Covered on Page 5:</h3>
+              <span class="page-code-tag">Module: game_over_page.py</span>
+            </div>
+
+            <div class="topics-list">
+              <div class="topic-item">
+                <span class="topic-icon">🎓</span>
+                <div class="topic-content">
+                  <div class="topic-title">The Educational Moment</div>
+                  <div class="topic-desc">When players crash, they pay 100% attention! They see the sign, remember it, and learn.</div>
+                </div>
+              </div>
+
+              <div class="topic-item">
+                <span class="topic-icon">⚠️</span>
+                <div class="topic-content">
+                  <div class="topic-title">Real Road Sign & Rule</div>
+                  <div class="topic-desc">Shows a clear picture of the road sign and explains its rule in simple words.</div>
+                </div>
+              </div>
+
+              <div class="topic-item">
+                <span class="topic-icon">📈</span>
+                <div class="topic-content">
+                  <div class="topic-title">Score vs High Score</div>
+                  <div class="topic-desc">Shows your score and compares it with your best record so you drive better.</div>
+                </div>
+              </div>
+
+              <div class="topic-item">
+                <span class="topic-icon">🔄</span>
+                <div class="topic-content">
+                  <div class="topic-title">Play Again in 1 Click</div>
+                  <div class="topic-desc">Hit SPACE or R to restart right away, or click Home to visit Shop or Quiz.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------
+         SLIDE 11: PAGE 6 — PAUSE MENU & SOUND SETTINGS
+         -------------------------------------------------------------------- -->
+    <section class="slide-section" id="slide-11" data-title="Page 6: Pause Menu">
+      <div class="slide-inner">
+        <div class="slide-header">
+          <div class="slide-pretitle">Page 6 / 7 • شاشة التوقف المؤقت والصوت</div>
+          <h2 class="slide-title">Page 6: Pause Menu & Sound Settings</h2>
+          <p class="slide-subtitle">Freeze the race anytime and easily turn sound on or off.</p>
+        </div>
+
+        <div class="page-detail-layout">
+          <div class="page-preview-column">
+            <div class="page-mockup-frame" onclick="openScreenshotLightbox('assets/screenshots/pause-screen.png', 'Pause Menu & Sound Controls Interface')">
+              <img src="assets/screenshots/pause-screen.png" alt="Pause Screen" class="page-mockup-img">
+              <div class="page-mockup-badge">
+                <span>⏸️ pause_page.py • 60 FPS Freeze</span>
+              </div>
+            </div>
+            <div style="font-size: 0.88rem; color: var(--gold-hover); text-align: center; font-weight: 600;">
+              ▲ Click screenshot to inspect full resolution in lightbox
+            </div>
+          </div>
+
+          <div class="page-topics-card">
+            <div class="page-header-row">
+              <h3 style="font-family: var(--font-display); font-size: 1.35rem; color: #fff;">Topics Covered on Page 6:</h3>
+              <span class="page-code-tag">Module: pause_page.py</span>
+            </div>
+
+            <div class="topics-list">
+              <div class="topic-item">
+                <span class="topic-icon">⏸️</span>
+                <div class="topic-content">
+                  <div class="topic-title">Quick Pause (P or ESC)</div>
+                  <div class="topic-desc">Freeze the game anytime without losing your score or lane position.</div>
+                </div>
+              </div>
+
+              <div class="topic-item">
+                <span class="topic-icon">🔊</span>
+                <div class="topic-content">
+                  <div class="topic-title">Sound On / Off (M)</div>
+                  <div class="topic-desc">Press M or click the sound button to mute or unmute music anytime.</div>
+                </div>
+              </div>
+
+              <div class="topic-item">
+                <span class="topic-icon">▶️</span>
+                <div class="topic-content">
+                  <div class="topic-title">Resume Right Away</div>
+                  <div class="topic-desc">Click Resume or hit P to keep driving at the exact same speed.</div>
+                </div>
+              </div>
+
+              <div class="topic-item">
+                <span class="topic-icon">🖥️</span>
+                <div class="topic-content">
+                  <div class="topic-title">Fullscreen Mode (F)</div>
+                  <div class="topic-desc">Press F to make the game full screen on any school laptop.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------
+         SLIDE 12: PAGE 7 — GAME MAKERS SCREEN
+         -------------------------------------------------------------------- -->
+    <section class="slide-section" id="slide-12" data-title="Page 7: Makers Screen">
+      <div class="slide-inner">
+        <div class="slide-header">
+          <div class="slide-pretitle">Page 7 / 7 • شاشة فريق العمل والتقدير</div>
+          <h2 class="slide-title">Page 7: Game Makers & Student Team</h2>
+          <p class="slide-subtitle">Made by 4 Egyptian students who care about road safety.</p>
+        </div>
+
+        <div class="page-detail-layout">
+          <div class="page-preview-column">
+            <div class="page-mockup-frame" onclick="openScreenshotLightbox('assets/screenshots/makers-screen.png', 'Game Makers & Development Team Screen')">
+              <img src="assets/screenshots/makers-screen.png" alt="Makers Screen" class="page-mockup-img">
+              <div class="page-mockup-badge">
+                <span>👥 makers_page.py • 4 Egyptian Students</span>
+              </div>
+            </div>
+            <div style="font-size: 0.88rem; color: var(--gold-hover); text-align: center; font-weight: 600;">
+              ▲ Click screenshot to inspect full resolution in lightbox
+            </div>
+          </div>
+
+          <div class="page-topics-card">
+            <div class="page-header-row">
+              <h3 style="font-family: var(--font-display); font-size: 1.35rem; color: #fff;">Topics Covered on Page 7:</h3>
+              <span class="page-code-tag">Module: makers_page.py</span>
+            </div>
+
+            <div class="topics-list">
+              <div class="topic-item">
+                <span class="topic-icon">🎤</span>
+                <div class="topic-content">
+                  <div class="topic-title">Top Row: Presenters</div>
+                  <div class="topic-desc">Ali Mahrous & Jomana Ahmad presenting our project to the judges.</div>
+                </div>
+              </div>
+
+              <div class="topic-item">
+                <span class="topic-icon">💻</span>
+                <div class="topic-content">
+                  <div class="topic-title">Bottom Row: Developers</div>
+                  <div class="topic-desc">Yousef Hussein (Game Code) and Yousef Sheta (Graphics & Road Art).</div>
+                </div>
+              </div>
+
+              <div class="topic-item">
+                <span class="topic-icon">📍</span>
+                <div class="topic-content">
+                  <div class="topic-title">From Kafr El Sheikh</div>
+                  <div class="topic-desc">Four 15-year-old Egyptian students using Python to save lives.</div>
+                </div>
+              </div>
+
+              <div class="topic-item">
+                <span class="topic-icon">🏆</span>
+                <div class="topic-content">
+                  <div class="topic-title">Thank You to the Forum</div>
+                  <div class="topic-desc">Special thanks to our judges, teachers, and the Afro-Asian Forum.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------
+         SLIDE 13: FEATURE DEEP DIVE — COINS & HEALTH SYSTEM
+         -------------------------------------------------------------------- -->
+    <section class="slide-section" id="slide-13" data-title="Feature: Coins & Health">
+      <div class="slide-inner">
+        <div class="slide-header">
+          <div class="slide-pretitle">Features & Mechanics • نظام العملات والقلوب</div>
+          <h2 class="slide-title">How Coins & Hearts Work</h2>
+          <p class="slide-subtitle">Coins reward learning, and 3 hearts teach kids to drive carefully.</p>
+        </div>
+
+        <div class="problem-columns-grid">
+          <!-- Coins Card -->
+          <div class="card-panel" style="border-color: var(--border-gold);">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+              <h3 style="font-family: var(--font-display); font-size: 1.35rem; color: #fff;">💰 Coins System</h3>
+              <span class="page-code-tag" style="color: var(--gold-primary); border-color: var(--gold-primary);">Economy Rule</span>
+            </div>
+
+            <div class="topics-list">
+              <div class="topic-item">
+                <span class="topic-icon">🛣️</span>
+                <div class="topic-content">
+                  <div class="topic-title">Coins on the Road</div>
+                  <div class="topic-desc">Gold coins appear on highway lanes. Steer into them to collect!</div>
+                </div>
+              </div>
+
+              <div class="topic-item">
+                <span class="topic-icon">🔔</span>
+                <div class="topic-content">
+                  <div class="topic-title">Fun Coin Sound</div>
+                  <div class="topic-desc">A pleasant ding sound plays every time you pick up a coin.</div>
+                </div>
+              </div>
+
+              <div class="topic-item">
+                <span class="topic-icon">❓</span>
+                <div class="topic-content">
+                  <div class="topic-title">Quiz Coin Rewards</div>
+                  <div class="topic-desc">Answer a road sign question correctly to win +1 gold coin.</div>
+                </div>
+              </div>
+
+              <div class="topic-item">
+                <span class="topic-icon">🛍️</span>
+                <div class="topic-content">
+                  <div class="topic-title">Buy Cool Cars</div>
+                  <div class="topic-desc">Save your coins to unlock awesome cars like the Ferrari and Golden Car!</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Health Card -->
+          <div class="card-panel" style="border-color: var(--red-hazard);">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+              <h3 style="font-family: var(--font-display); font-size: 1.35rem; color: #fff;">❤️ 3-Hearts Health System</h3>
+              <span class="page-code-tag" style="color: var(--red-hazard); border-color: var(--red-hazard);">Safety Rule</span>
+            </div>
+
+            <div class="topics-list">
+              <div class="topic-item">
+                <span class="topic-icon">3️⃣</span>
+                <div class="topic-content">
+                  <div class="topic-title">3 Hearts to Start</div>
+                  <div class="topic-desc">Every race begins with 3 hearts. Just like real life, safety comes first!</div>
+                </div>
+              </div>
+
+              <div class="topic-item">
+                <span class="topic-icon">💥</span>
+                <div class="topic-content">
+                  <div class="topic-title">Hit = Lose 1 Heart</div>
+                  <div class="topic-desc">Crashing into a traffic car takes away 1 heart and plays a crash sound.</div>
+                </div>
+              </div>
+
+              <div class="topic-item">
+                <span class="topic-icon">🛡️</span>
+                <div class="topic-content">
+                  <div class="topic-title">1-Second Safe Mode</div>
+                  <div class="topic-desc">Your car flashes for 1 second so you have time to steer away from danger.</div>
+                </div>
+              </div>
+
+              <div class="topic-item">
+                <span class="topic-icon">🚫</span>
+                <div class="topic-content">
+                  <div class="topic-title">0 Hearts = Game Over</div>
+                  <div class="topic-desc">When all 3 hearts are gone, Game Over opens with a road sign lesson!</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------
+         SLIDE 14: FEATURE DEEP DIVE — 6 ROAD MAPS & SCENERY
+         -------------------------------------------------------------------- -->
+    <section class="slide-section" id="slide-14" data-title="Feature: 6 Road Maps">
+      <div class="slide-inner">
+        <div class="slide-header">
+          <div class="slide-pretitle">Features & Mechanics • الخرائط والطرق الستة</div>
+          <h2 class="slide-title">6 Exciting Road Maps</h2>
+          <p class="slide-subtitle">As your score goes up, the road changes into 6 different exciting worlds!</p>
+        </div>
+
+        <div class="roads-showcase-grid">
+          <div class="road-card" onclick="openScreenshotLightbox('assets/game-images/roads/road_egypt_level5.png', 'Level 1: Egyptian Highway')">
+            <div class="road-preview-box">
+              <img src="assets/game-images/roads/road_egypt_level5.png" alt="Egypt Road">
+              <span class="road-level-tag">Level 1</span>
+            </div>
+            <div class="road-card-body">
+              <div class="road-name">Egyptian Highway</div>
+              <div class="road-desc">Our home roads in Egypt. Gentle starting speed.</div>
+            </div>
+          </div>
+
+          <div class="road-card" onclick="openScreenshotLightbox('assets/game-images/roads/road_forest_level6.png', 'Level 2: Forest Canopy Route')">
+            <div class="road-preview-box">
+              <img src="assets/game-images/roads/road_forest_level6.png" alt="Forest Road">
+              <span class="road-level-tag">Level 2</span>
+            </div>
+            <div class="road-card-body">
+              <div class="road-name">Forest Canopy</div>
+              <div class="road-desc">Green forest highway. Unlocks at 30 points.</div>
+            </div>
+          </div>
+
+          <div class="road-card" onclick="openScreenshotLightbox('assets/game-images/roads/road_snow_level3.png', 'Level 3: Alpine Snow Route')">
+            <div class="road-preview-box">
+              <img src="assets/game-images/roads/road_snow_level3.png" alt="Snow Road">
+              <span class="road-level-tag">Level 3</span>
+            </div>
+            <div class="road-card-body">
+              <div class="road-name">Alpine Snow</div>
+              <div class="road-desc">Slippery icy road. Unlocks at 60 points.</div>
+            </div>
+          </div>
+
+          <div class="road-card" onclick="openScreenshotLightbox('assets/game-images/roads/road_night_level4.png', 'Level 4: Night City Expressway')">
+            <div class="road-preview-box">
+              <img src="assets/game-images/roads/road_night_level4.png" alt="Night Road">
+              <span class="road-level-tag">Level 4</span>
+            </div>
+            <div class="road-card-body">
+              <div class="road-name">Night Expressway</div>
+              <div class="road-desc">Dark highway with bright city lights. Unlocks at 90 points.</div>
+            </div>
+          </div>
+
+          <div class="road-card" onclick="openScreenshotLightbox('assets/game-images/roads/road_normal_level1.png', 'Level 5: Standard Highway')">
+            <div class="road-preview-box">
+              <img src="assets/game-images/roads/road_normal_level1.png" alt="Standard Road">
+              <span class="road-level-tag">Level 5</span>
+            </div>
+            <div class="road-card-body">
+              <div class="road-name">Standard Asphalt</div>
+              <div class="road-desc">Heavy oncoming traffic. Unlocks at 120 points.</div>
+            </div>
+          </div>
+
+          <div class="road-card" onclick="openScreenshotLightbox('assets/game-images/roads/road_desert_level2.png', 'Level 6: Desert Safari Highway')">
+            <div class="road-preview-box">
+              <img src="assets/game-images/roads/road_desert_level2.png" alt="Desert Road">
+              <span class="road-level-tag">Level 6</span>
+            </div>
+            <div class="road-card-body">
+              <div class="road-name">Desert Safari</div>
+              <div class="road-desc">Egyptian desert dunes. Unlocks at 150 points — Turbo speed!</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="road-tech-callout">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <span style="font-size: 1.5rem;">⚙️</span>
+            <div>
+              <strong style="color: #fff; font-size: 1.05rem;">How Road Movement Works:</strong>
+              <span style="color: var(--text-secondary); font-size: 0.95rem;"> Two road pictures loop smoothly downwards, so the race never stops!</span>
+            </div>
+          </div>
+          <span style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--gold-primary); font-weight: 700;">6 WIDE LANES FOR CAR DODGING</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------
+         SLIDE 15: FEATURE DEEP DIVE — SPEED, HIGH SCORE & LEVELS
+         -------------------------------------------------------------------- -->
+    <section class="slide-section" id="slide-15" data-title="Feature: Speed & Levels">
+      <div class="slide-inner">
+        <div class="slide-header">
+          <div class="slide-pretitle">Levels & Speed • السرعة والمستويات والأرقام القياسية</div>
+          <h2 class="slide-title">How Speed & Levels Work</h2>
+          <p class="slide-subtitle">As you get more points, cars get faster and oncoming traffic gets closer!</p>
+        </div>
+
+        <div class="progression-split-grid">
+          <div class="card-panel">
+            <h3 style="font-family: var(--font-display); font-size: 1.25rem; color: #fff; margin-bottom: 10px;">Level Progression Rules</h3>
+            <table class="progression-table">
+              <thead>
+                <tr>
+                  <th>Level</th>
+                  <th>Score</th>
+                  <th>Theme</th>
+                  <th>Max Speed</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong style="color: #fff;">Level 1</strong></td>
+                  <td>0 – 29 pts</td>
+                  <td>Egyptian Highway</td>
+                  <td><span style="color: var(--cyan-accent); font-weight: 700;">3.0 – 7.0 px/f</span></td>
+                </tr>
+                <tr>
+                  <td><strong style="color: #fff;">Level 2</strong></td>
+                  <td>30 – 59 pts</td>
+                  <td>Forest Canopy</td>
+                  <td><span style="color: var(--cyan-accent); font-weight: 700;">5.0 – 7.0 px/f</span></td>
+                </tr>
+                <tr>
+                  <td><strong style="color: #fff;">Level 3</strong></td>
+                  <td>60 – 89 pts</td>
+                  <td>Alpine Snow</td>
+                  <td><span style="color: var(--cyan-accent); font-weight: 700;">7.0 px/f (Icy)</span></td>
+                </tr>
+                <tr>
+                  <td><strong style="color: #fff;">Level 4</strong></td>
+                  <td>90 – 119 pts</td>
+                  <td>Night Expressway</td>
+                  <td><span style="color: var(--gold-primary); font-weight: 700;">9.0 px/f</span></td>
+                </tr>
+                <tr>
+                  <td><strong style="color: #fff;">Level 5</strong></td>
+                  <td>120 – 149 pts</td>
+                  <td>Standard Asphalt</td>
+                  <td><span style="color: var(--gold-primary); font-weight: 700;">12.0 px/f</span></td>
+                </tr>
+                <tr>
+                  <td><strong style="color: #fff;">Level 6</strong></td>
+                  <td>150+ pts</td>
+                  <td>Desert Safari</td>
+                  <td><span style="color: var(--red-hazard); font-weight: 700;">15.0 px/f (TURBO!)</span></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div style="margin-top: 14px; background: rgba(10, 14, 22, 0.7); border: 1px solid var(--border-gold); border-radius: var(--radius-md); padding: 12px 16px;">
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px;">
+                <span style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--gold-primary);">🏆 All-Time High Score</span>
+                <span class="page-code-tag" style="font-size: 0.7rem;">Persistent Storage</span>
+              </div>
+              <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.45;">
+                The game always remembers your highest score. Try to beat your record every time you play!
+              </p>
+            </div>
+          </div>
+
+          <!-- Interactive Calculator Demo -->
+          <div class="card-panel card-panel-gold">
+            <h3 style="font-family: var(--font-display); font-size: 1.25rem; color: #fff; margin-bottom: 6px;">Interactive Speed Test • جرّب بنفسك</h3>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 14px;">Move the slider to see how car speed and traffic increase as points go up:</p>
+
+            <div style="margin-bottom: 16px;">
+              <div style="display: flex; justify-content: space-between; font-size: 1rem; margin-bottom: 6px;">
+                <span style="color: var(--text-white); font-weight: 700;">Player Score (النقاط):</span>
+                <span style="font-family: var(--font-mono); font-weight: 800; font-size: 1.2rem; color: var(--gold-primary);" id="calcScoreVal">0</span>
+              </div>
+              <input type="range" id="calcScoreSlider" min="0" max="200" value="0" step="5" style="width: 100%; accent-color: var(--gold-primary); cursor: pointer; height: 8px;">
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+              <div class="stat-box" style="padding: 12px;">
+                <div style="font-size: 0.78rem; color: var(--text-muted); font-weight: 700; font-family: var(--font-mono);">ACTIVE LEVEL</div>
+                <div style="font-size: 1.35rem; font-weight: 800; color: #fff; font-family: var(--font-display);" id="calcLevelVal">Level 1</div>
+              </div>
+              <div class="stat-box" style="padding: 12px;">
+                <div style="font-size: 0.78rem; color: var(--text-muted); font-weight: 700; font-family: var(--font-mono);">ROAD SPEED</div>
+                <div style="font-size: 1.35rem; font-weight: 800; color: var(--cyan-accent); font-family: var(--font-display);" id="calcSpeedVal">3.0 px/f</div>
+              </div>
+              <div class="stat-box" style="padding: 12px; grid-column: 1 / -1;">
+                <div style="font-size: 0.78rem; color: var(--text-muted); font-weight: 700; font-family: var(--font-mono);">ENEMY SPAWN DELAY (AI TRAFFIC FREQUENCY)</div>
+                <div style="font-size: 1.2rem; font-weight: 800; color: var(--green-safety); font-family: var(--font-display);" id="calcSpawnVal">120 frames (~2.00s)</div>
+              </div>
+            </div>
+
+            <div style="font-size: 0.85rem; color: var(--gold-hover); margin-top: 10px; font-weight: 600; text-align: center;">
+              Our Rule: Speed increases slowly step by step so kids learn to react and avoid crashes!
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------
+         SLIDE 16: FEATURE DEEP DIVE — CONTROLS & AUDIO ENGINE
+         -------------------------------------------------------------------- -->
+    <section class="slide-section" id="slide-16" data-title="Feature: Controls & Audio">
+      <div class="slide-inner">
+        <div class="slide-header">
+          <div class="slide-pretitle">Controls & Audio • طريقة التحكم ومحرك الصوت</div>
+          <h2 class="slide-title">Easy Controls & Sound</h2>
+          <p class="slide-subtitle">Simple keys on any keyboard, plus fun racing sounds and music!</p>
+        </div>
+
+        <div class="controls-layout-grid">
+          <!-- Left Column: Keyboard Map -->
+          <div class="keys-legend-grid">
+            <div class="key-card">
+              <span class="key-badge">← →</span>
+              <div>
+                <strong>Steer Left & Right</strong>
+                <p>Smooth lane switching across 6 lanes (or A / D keys)</p>
+              </div>
+            </div>
+
+            <div class="key-card">
+              <span class="key-badge">SPACE</span>
+              <div>
+                <strong>Start & Restart</strong>
+                <p>Start race or restart instantly after a crash</p>
+              </div>
+            </div>
+
+            <div class="key-card">
+              <span class="key-badge">P / ESC</span>
+              <div>
+                <strong>Pause Game</strong>
+                <p>Freeze the screen without losing your score</p>
+              </div>
+            </div>
+
+            <div class="key-card">
+              <span class="key-badge">M</span>
+              <div>
+                <strong>Mute Sound</strong>
+                <p>Turn music and sound effects on or off anytime</p>
+              </div>
+            </div>
+
+            <div class="key-card">
+              <span class="key-badge">Q</span>
+              <div>
+                <strong>Traffic Signs Quiz</strong>
+                <p>Jump straight into the 20 road sign questions</p>
+              </div>
+            </div>
+
+            <div class="key-card">
+              <span class="key-badge">H</span>
+              <div>
+                <strong>Home Menu</strong>
+                <p>Return to the main start menu in one click</p>
+              </div>
+            </div>
+
+            <div class="key-card">
+              <span class="key-badge">F</span>
+              <div>
+                <strong>Fullscreen Mode</strong>
+                <p>Make the game fill the whole laptop screen</p>
+              </div>
+            </div>
+
+            <div class="key-card">
+              <span class="key-badge">Mouse</span>
+              <div>
+                <strong>Click to Select</strong>
+                <p>Click to choose quiz answers or buy cars</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Audio Engine -->
+          <div class="audio-engine-panel">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <h3 style="font-family: var(--font-display); font-size: 1.25rem; color: #fff;">🔊 How Sound Works in Code</h3>
+              <span class="page-code-tag" style="color: var(--cyan-accent); border-color: var(--cyan-accent);">pygame.mixer</span>
+            </div>
+
+            <div class="audio-engine-item">
+              <span class="audio-item-icon">🎵</span>
+              <div class="audio-item-content">
+                <div class="audio-item-title">Racing Music</div>
+                <div class="audio-item-desc">Exciting background driving music that loops while racing.</div>
+              </div>
+            </div>
+
+            <div class="audio-engine-item">
+              <span class="audio-item-icon">💥</span>
+              <div class="audio-item-content">
+                <div class="audio-item-title">Real Sound Effects</div>
+                <div class="audio-item-desc">Sounds for car engines, crashes, and coin dings.</div>
+              </div>
+            </div>
+
+            <div class="audio-engine-item">
+              <span class="audio-item-icon">🔇</span>
+              <div class="audio-item-content">
+                <div class="audio-item-title">Instant Mute</div>
+                <div class="audio-item-desc">Press M anytime to turn off sound without stopping the race.</div>
+              </div>
+            </div>
+
+            <div class="audio-engine-item">
+              <span class="audio-item-icon">🔔</span>
+              <div class="audio-item-content">
+                <div class="audio-item-title">Quiz Audio Feedback</div>
+                <div class="audio-item-desc">A winning chime for right answers, and a warning buzz for wrong ones.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------
+         SLIDE 17: FRAMEWORKS AND LIBRARIES
+         -------------------------------------------------------------------- -->
+    <section class="slide-section" id="slide-17" data-title="Frameworks & Libraries">
+      <div class="slide-inner">
+        <div class="slide-header">
+          <div class="slide-pretitle">How We Built It • لغات وأطر البرمجة</div>
+          <h2 class="slide-title">How We Built It: Python & Pygame</h2>
+          <p class="slide-subtitle">We built the whole game from scratch using Python and free tools.</p>
+        </div>
+
+        <div class="frameworks-grid">
+          <!-- Python 3.12 Card -->
+          <div class="framework-card">
+            <div class="framework-card-header">
+              <div class="framework-title-group">
+                <span class="framework-icon">🐍</span>
+                <span class="framework-name">Python 3 Core</span>
+              </div>
+              <span class="framework-badge badge-python">Core Language</span>
+            </div>
+            <ul class="framework-features">
+              <li>Clean, easy language that helped 15-year-old students learn fast</li>
+              <li>Organized into 7 clean files for menus, race, shop, and quiz</li>
+              <li>Runs fast and smoothly on simple school computers</li>
+              <li>Works 100% offline in classrooms—no internet needed</li>
+            </ul>
+          </div>
+
+          <!-- Pygame & Pygame Zero Card -->
+          <div class="framework-card">
+            <div class="framework-card-header">
+              <div class="framework-title-group">
+                <span class="framework-icon">🎮</span>
+                <span class="framework-name">Pygame Framework</span>
+              </div>
+              <span class="framework-badge badge-pygame">Game Framework</span>
+            </div>
+            <ul class="framework-features">
+              <li>Powers the 60 FPS car movement, roads, and collisions</li>
+              <li>Draws our player car, opposing cars, and gold coins</li>
+              <li>Handles smooth screen drawing and keyboard controls</li>
+              <li>Plays music and crash sounds with zero delay</li>
+            </ul>
+          </div>
+
+          <!-- PyInstaller Card -->
+          <div class="framework-card">
+            <div class="framework-card-header">
+              <div class="framework-title-group">
+                <span class="framework-icon">📦</span>
+                <span class="framework-name">PyInstaller Standalone</span>
+              </div>
+              <span class="framework-badge badge-compiler">Distribution</span>
+            </div>
+            <ul class="framework-features">
+              <li>Compiles all Python code and pictures into a single Turpo.exe (60 MB)</li>
+              <li>Opens immediately with a double-click on Windows</li>
+              <li>No need to install Python or anything on school computers</li>
+              <li>Perfect for students and teachers in any school lab</li>
+            </ul>
+          </div>
+
+          <!-- Math & Physics Card -->
+          <div class="framework-card">
+            <div class="framework-card-header">
+              <div class="framework-title-group">
+                <span class="framework-icon">📐</span>
+                <span class="framework-name">Game Math & Logic</span>
+              </div>
+              <span class="framework-badge badge-math">Built-in Stdlib</span>
+            </div>
+            <ul class="framework-features">
+              <li>6 lane positions so cars stay perfectly on the road</li>
+              <li>Simple box collision math to detect car crashes</li>
+              <li>Random traffic and coin positions to make every race fresh</li>
+              <li>Speed formulas that increase gradually as points go up</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="road-tech-callout" style="margin-top: 14px;">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <span style="font-size: 1.5rem;">🌐</span>
+            <div>
+              <strong style="color: #fff; font-size: 1.05rem;">Presentation Web Stack:</strong>
+              <span style="color: var(--text-secondary); font-size: 0.95rem;"> This competition presentation itself is built with vanilla HTML5, CSS3, and JavaScript—running 100% offline!</span>
+            </div>
+          </div>
+          <span style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--gold-primary); font-weight: 700;">100% STUDENT CODE</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------
+         SLIDE 18: 20 TRAFFIC SIGNS & EDUCATIONAL IMPACT
+         -------------------------------------------------------------------- -->
+    <section class="slide-section" id="slide-18" data-title="Traffic Signs & Impact">
+      <div class="slide-inner">
+        <div class="slide-header">
+          <div class="slide-pretitle">Educational Impact • بنك الإشارات المرورية</div>
+          <h2 class="slide-title">20 Real Signs & Safety Impact</h2>
+          <p class="slide-subtitle">Real road signs kids see on streets, taught during crashes and in the quiz.</p>
+        </div>
+
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+          <div style="display: flex; gap: 8px;">
+            <button class="filter-pill active" data-category="all">All Signs (20)</button>
+            <button class="filter-pill" data-category="warning">Warning Signs (11)</button>
+            <button class="filter-pill" data-category="regulatory">Regulatory Signs (3)</button>
+            <button class="filter-pill" data-category="prohibitory">Prohibitory Signs (6)</button>
+          </div>
+          <span style="font-size: 0.85rem; color: var(--gold-hover); font-weight: 600;">Click any sign to inspect in-game definition</span>
+        </div>
+
+        <div class="signs-contact-grid" id="signsContactGrid"></div>
+
+        <div class="sustainability-banner" style="margin-top: 14px;">
+          <div style="display: flex; align-items: center; gap: 14px;">
+            <span style="font-size: 1.6rem;">⚡</span>
+            <span><strong>Why Kids Learn Fast:</strong> When players crash, they pay 100% attention! Showing the road sign at that exact second turns a game mistake into a life-saving habit.</span>
+          </div>
+          <span style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--gold-primary);">Educational Game Science</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------
+         SLIDE 19: FUTURE DEVELOPMENT ROADMAP
+         -------------------------------------------------------------------- -->
+    <section class="slide-section" id="slide-19" data-title="Future Roadmap">
+      <div class="slide-inner">
+        <div class="slide-header">
+          <div class="slide-pretitle">Future Vision • خطة التطوير والمستقبل</div>
+          <h2 class="slide-title">What We Plan Next!</h2>
+          <p class="slide-subtitle">Our plan to bring Turbo to millions of kids across Egypt, Africa, and Asia.</p>
+        </div>
+
+        <div class="roadmap-timeline-grid">
+          <div class="roadmap-stage-card stage-current">
+            <span class="stage-badge badge-complete">Stage 1: Done! (منجز)</span>
+            <div class="stage-title">Core PC Game</div>
+            <ul class="stage-items-list">
+              <li>6 fun roads and 20 verified road signs</li>
+              <li>Interactive 20-sign quiz with gold coin rewards</li>
+              <li>Car Shop with 9 unlockable cars</li>
+              <li>One 60 MB file ready for school computers</li>
+            </ul>
+          </div>
+
+          <div class="roadmap-stage-card">
+            <span class="stage-badge badge-planned">Stage 2: Next (قريباً)</span>
+            <div class="stage-title">More Content</div>
+            <ul class="stage-items-list">
+              <li>Add 50 new international road signs</li>
+              <li>Real Egyptian street scenes and landmarks</li>
+              <li>Save high scores and trophies online</li>
+              <li>Pedestrian crossing missions to save people</li>
+            </ul>
+          </div>
+
+          <div class="roadmap-stage-card">
+            <span class="stage-badge badge-planned">Stage 3: Planned (مستقبلاً)</span>
+            <div class="stage-title">Mobile & Friends</div>
+            <ul class="stage-items-list">
+              <li>Android and mobile phone touch version</li>
+              <li>Play with a friend on the same screen (2-Player)</li>
+              <li>Arabic voice explanations for younger kids</li>
+              <li>Web version that opens in any browser</li>
+            </ul>
+          </div>
+
+          <div class="roadmap-stage-card">
+            <span class="stage-badge badge-planned">Stage 4: Goal (الهدف)</span>
+            <div class="stage-title">Schools & Competitions</div>
+            <ul class="stage-items-list">
+              <li>Bring Turbo to 10 pilot schools in Egypt</li>
+              <li>Test kids' sign knowledge before and after playing</li>
+              <li>Friendly competitions in youth clubs and schools</li>
+              <li>Support from traffic police and safety sponsors</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="sustainability-banner" style="margin-top: 14px;">
+          <div style="display: flex; align-items: center; gap: 14px;">
+            <span style="font-size: 1.6rem;">🌱</span>
+            <span><strong>Our Promise:</strong> 100% Free for all students and schools, always! Safety comes first.</span>
+          </div>
+          <span style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--gold-primary);">Non-Profit Mission</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------
+         SLIDE 20: CLOSING AND THE ASK
+         -------------------------------------------------------------------- -->
+    <section class="slide-section" id="slide-20" data-title="Closing Pitch">
+      <div class="slide-inner">
+        <div class="closing-card-layout">
+          <div class="cover-badge-row" style="margin-bottom: 0;">
+            <span class="cover-tag">Afro-Asian Forum 2026 • ختام العرض والتقدير</span>
+          </div>
+
+          <h2 class="closing-quote">
+            “Play to Learn, Drive to Live!”<br>
+            <span style="font-size: 0.88em; color: var(--gold-hover); font-family: var(--font-arabic);">«العب لتتعلّم • قُد لتسلَم»</span>
+          </h2>
+
+          <p style="max-width: 780px; font-size: 1.15rem; color: var(--text-secondary); line-height: 1.7;">
+            A real accident in our city inspired us to build this game.<br>
+            We are four 15-year-old Egyptian students who want to make roads safer for everyone our age.<br>
+            With your support and mentorship, we can protect thousands of young lives across Africa and Asia!<br>
+            Thank you to our judges, mentors, and the Afro-Asian Forum!
+          </p>
+
+          <div class="closing-team-names">
+            Presented with pride by <strong>Ali Mahrous</strong> & <strong>Jomana Ahmad</strong><br>
+            <span style="font-size: 1.05rem; color: var(--gold-hover); font-weight: 600;">
+              On behalf of Yousef Hussein, Yousef Sheta & the entire Turbo Team
+            </span><br>
+            <span style="font-size: 0.95rem; color: var(--text-secondary); font-family: var(--font-arabic);">
+              (علي محروس • جمانة أحمد • يوسف حسين • يوسف شتة)
+            </span>
+          </div>
+
+          <div class="closing-buttons-row">
+            <button class="cta-start-btn" onclick="document.getElementById('presentationContainer').scrollTo({top: 0, behavior: 'smooth'})">
+              <span>↺ RESTART PRESENTATION</span>
+            </button>
+            <button class="btn-ctrl" style="padding: 16px 28px; font-size: 1.05rem;" onclick="document.getElementById('jumpMenuBtn').click()">
+              <span>☰ JUMP TO SLIDE</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       MODALS: LIGHTBOX, JUMP MENU & SIGN DETAIL
+       ======================================================================== -->
+
+  <!-- Lightbox Modal for Fullscreen Screenshots -->
+  <div class="modal-backdrop" id="lightboxModal" role="dialog" aria-modal="true">
+    <div class="modal-content-box" style="text-align: center;">
+      <button class="modal-close-btn" aria-label="Close Lightbox">✕</button>
+      <img id="lightboxImg" src="" alt="Enlarged Screenshot" style="max-width: 100%; max-height: 70vh; border-radius: 8px; margin-bottom: 12px; border: 1px solid var(--border-gold);">
+      <div id="lightboxCaption" style="font-size: 0.95rem; color: var(--gold-hover); font-weight: 600;"></div>
+    </div>
+  </div>
+
+  <!-- Sign Detail Modal -->
+  <div class="modal-backdrop" id="signDetailModal" role="dialog" aria-modal="true">
+    <div class="modal-content-box" style="max-width: 580px; text-align: center;">
+      <button class="modal-close-btn" aria-label="Close Details">✕</button>
+      <div id="signDetailCategory" style="display: inline-block; font-size: 0.75rem; font-weight: 700; color: var(--gold-primary); background: rgba(255,215,0,0.15); border: 1px solid var(--border-gold); padding: 3px 10px; border-radius: 999px; margin-bottom: 14px;"></div>
+      <h3 id="signDetailTitle" style="font-family: var(--font-display); font-size: 1.4rem; color: #fff; margin-bottom: 16px;"></h3>
+      <img id="signDetailImg" src="" alt="Traffic Sign Graphic" style="width: 140px; height: 140px; object-fit: contain; margin-bottom: 20px; filter: drop-shadow(0 4px 12px rgba(0,0,0,0.6));">
+      <div style="background: rgba(10,14,22,0.8); border: 1px solid var(--border-subtle); border-radius: 12px; padding: 18px; text-align: left;">
+        <div style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono); margin-bottom: 6px;">VERIFIED IN-GAME EXPLANATION:</div>
+        <div id="signDetailDesc" style="font-size: 0.95rem; color: var(--text-primary); line-height: 1.6;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick Jump Menu Modal -->
+  <div class="modal-backdrop" id="jumpMenuModal" role="dialog" aria-modal="true">
+    <div class="modal-content-box">
+      <button class="modal-close-btn" aria-label="Close Menu">✕</button>
+      <h3 style="font-family: var(--font-display); font-size: 1.4rem; color: #fff;">Presentation Table of Contents</h3>
+      <p style="font-size: 0.85rem; color: var(--text-muted);">Quickly navigate to any of the 20 presentation slides:</p>
+      <div class="jump-menu-grid" id="jumpMenuGrid"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
