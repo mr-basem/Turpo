@@ -34,7 +34,7 @@ Then open your browser and navigate to:
 | **↓ / Page Down / Space** | Advance to Next Slide |
 | **↑ / Page Up** | Return to Previous Slide |
 | **Home** | Jump to Slide 1 (Cover) |
-| **End** | Jump to Slide 18 (Closing Pitch) |
+| **End** | Jump to Slide 20 (Closing Pitch) |
 | **F** | Toggle Fullscreen (Presentation Mode) |
 | **M / J** | Open Slide Jump Menu / Table of Contents |
 | **ESC** | Close any open modal / Lightbox / Jump menu |
@@ -46,7 +46,7 @@ Then open your browser and navigate to:
 
 ```
 turbo_b_boy_presentation/
-├── index.html                     # Complete 20-slide competition pitch (Simple English)
+├── index.html                     # Complete 20-slide competition pitch (Simple English + Multilingual Welcome)
 ├── styles.css                     # Road-inspired glassmorphism design system
 ├── script.js                      # Navigation, keyboard shortcuts, contact sheet, math simulator
 ├── PRESENTATION_SPEECH_GUIDE.md   # Slide-by-slide simple English speaker cue card guide

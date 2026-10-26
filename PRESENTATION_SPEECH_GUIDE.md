@@ -22,7 +22,19 @@
 
 ---
 
-## Slide 2: The Team (فريق العمل)
+## Slide 2: Welcome Honored Judges (رسالة ترحيب بحكّام المنتدى باللغات الأربعة)
+* **On Screen:** Welcome message in 4 languages: Arabic, English, Chinese (中文), and Turkish (Türkçe) for the judges from Egypt, China, and Turkey.
+* **🎤 What Jomana & Ali say (In Simple English & Languages):**  
+  > **Jomana (عربي):** «صباح الخير! سعداء جداً بوجودنا معكم اليوم، ونتمنى لكم وقتاً ممتعاً في منتدى الشباب الأفرو-آسيوي بأسوان!»  
+  > **Ali (English):** “Good morning! We are truly delighted to be with you today, and we hope you have a wonderful time at the Afro-Asian Youth Forum 2026!”  
+  > *(اختياري لطيف لإبهار الحكام الصينيين والأتراك):*  
+  > **Ali:** “*Zǎoshang hǎo!* (早上好) to our honored judges from China!”  
+  > **Jomana:** “*Günaydın!* to our esteemed judges from Turkey!”
+* **💡 نصيحة بالعربي:** هذه الشريحة ستترك انطباعاً مبهراً جداً عند الحكام الدوليين لأنكم ترحبون بهم بلغاتهم الرسمية في عروس النيل أسوان.
+
+---
+
+## Slide 3: The Team (فريق العمل)
 * **On Screen:** Photos of Ali, Jomana, Yousef Hussein, and Yousef Sheta.
 * **🎤 What Jomana says (In Simple English):**  
   > “We are four 15-year-old students from Kafr El Sheikh, Egypt. Ali and I are presenting today, and our teammates Yousef and Yousef wrote the Python code and designed the art.”
@@ -30,7 +42,7 @@
 
 ---
 
-## Slide 3: Problem & Story (المشكلة وقصة البداية)
+## Slide 4: Problem & Story (المشكلة وقصة البداية)
 * **On Screen:** Stadium Street incident, 18 is too late, books are boring.
 * **🎤 What Ali says (In Simple English):**  
   > “Official driving schools wait until age 18, but kids cross dangerous streets every single day. Books are boring and kids don't read them. Video games make learning active, fast, and fun!”
@@ -38,7 +50,7 @@
 
 ---
 
-## Slide 4: Promo Video (فيديو المشروع)
+## Slide 5: Promo Video (فيديو المشروع)
 * **On Screen:** HD Promo Video player.
 * **🎤 What Jomana says (In Simple English):**  
   > “Let's watch this quick video showing real street risks and how Turbo turns road signs into an exciting game!”
@@ -46,7 +58,7 @@
 
 ---
 
-## Slide 5: The 7 Screens Overview (شاشات اللعبة السبعة)
+## Slide 6: The 7 Screens Overview (شاشات اللعبة السبعة)
 * **On Screen:** Grid of all 7 game screens programmed in Python.
 * **🎤 What Ali says (In Simple English):**  
   > “We coded 7 full screens from scratch in Python: from the Start Menu and Highway Race to the Car Shop and Traffic Signs Quiz!”
@@ -54,7 +66,7 @@
 
 ---
 
-## Slide 6: Page 1 — Start Screen (شاشة البداية)
+## Slide 7: Page 1 — Start Screen (شاشة البداية)
 * **On Screen:** Start Menu with animated logo, High Score, and quick buttons.
 * **🎤 What Jomana says (In Simple English):**  
   > “On the start screen, players see their best score and can press Spacebar to start racing immediately, or click to open the Shop or Quiz.”
@@ -62,7 +74,7 @@
 
 ---
 
-## Slide 7: Page 2 — Play Screen (شاشة السباق)
+## Slide 8: Page 2 — Play Screen (شاشة السباق)
 * **On Screen:** 6-lane highway, player car, opposing traffic, HUD with 3 hearts and coins.
 * **🎤 What Ali says (In Simple English):**  
   > “Players steer smoothly across 6 lanes to dodge oncoming cars, grab gold coins, and protect their 3 health hearts.”
@@ -70,7 +82,7 @@
 
 ---
 
-## Slide 8: Page 3 — Traffic Signs Quiz (اختبار الإشارات)
+## Slide 9: Page 3 — Traffic Signs Quiz (اختبار الإشارات)
 * **On Screen:** 20 road signs, 4 interactive answer buttons, coin rewards.
 * **🎤 What Jomana says (In Simple English):**  
   > “This is our interactive quiz! Kids test their road sign knowledge with 20 real signs, and every correct answer rewards them with a gold coin!”
@@ -78,7 +90,7 @@
 
 ---
 
-## Slide 9: Page 4 — Car Store & Garage (متجر السيارات)
+## Slide 10: Page 4 — Car Store & Garage (متجر السيارات)
 * **On Screen:** 9 unlockable cars including Red Racer, Ferrari, and Formula 1.
 * **🎤 What Ali says (In Simple English):**  
   > “In the Car Shop, players can unlock 9 cool cars—like a Ferrari and the Golden Car—using their coins. It is 100% free with no real money!”
@@ -86,7 +98,7 @@
 
 ---
 
-## Slide 10: Page 5 — Game Over (شاشة الخسارة والتعليم)
+## Slide 11: Page 5 — Game Over (شاشة الخسارة والتعليم)
 * **On Screen:** Game Over screen revealing an authentic road sign safety rule.
 * **🎤 What Jomana says (In Simple English):**  
   > “This is our most important feature! When a player crashes, they pay 100% attention. At that exact second, we show a real road sign so they learn and never forget!”
@@ -94,7 +106,7 @@
 
 ---
 
-## Slide 11: Page 6 — Pause Menu (شاشة التوقف المؤقت)
+## Slide 12: Page 6 — Pause Menu (شاشة التوقف المؤقت)
 * **On Screen:** Pause popup with sound mute/unmute toggle.
 * **🎤 What Ali says (In Simple English):**  
   > “Players can press P to freeze the game anytime without losing their score, and press M to turn racing music on or off.”
@@ -102,7 +114,7 @@
 
 ---
 
-## Slide 12: Page 7 — Game Makers (شاشة فريق العمل)
+## Slide 13: Page 7 — Game Makers (شاشة فريق العمل)
 * **On Screen:** Student credits screen honoring the 4 students and mentors.
 * **🎤 What Jomana says (In Simple English):**  
   > “This screen honors our team from Kafr El Sheikh and shows our pride in representing Egypt at the Afro-Asian Forum!”
@@ -110,7 +122,7 @@
 
 ---
 
-## Slide 13: Coins & Hearts System (نظام العملات والقلوب)
+## Slide 14: Coins & Hearts System (نظام العملات والقلوب)
 * **On Screen:** Coins rules and 3-hearts health system.
 * **🎤 What Ali says (In Simple English):**  
   > “Coins reward learning, while the 3-heart system teaches kids defensive driving—if you crash, you lose a heart, and when hearts hit zero, you learn a road sign!”
@@ -118,7 +130,7 @@
 
 ---
 
-## Slide 14: 6 Dynamic Road Maps (الخرائط الستة)
+## Slide 15: 6 Dynamic Road Maps (الخرائط الستة)
 * **On Screen:** Egyptian Highway, Forest, Snow, Night City, Asphalt, and Desert Safari.
 * **🎤 What Jomana says (In Simple English):**  
   > “As your score goes up, the road smoothly changes into 6 exciting worlds—from our Egyptian Highway all the way to the Desert Safari!”
@@ -126,7 +138,7 @@
 
 ---
 
-## Slide 15: Speed & Level Progression (السرعة والمستويات)
+## Slide 16: Speed & Level Progression (السرعة والمستويات)
 * **On Screen:** Levels speed table and interactive slider calculator.
 * **🎤 What Ali says (In Simple English):**  
   > “Car speed increases slowly step-by-step so kids learn to react. You can drag this slider to see how the speed and traffic adapt in real time!”
@@ -134,40 +146,47 @@
 
 ---
 
-## Slide 16: Easy Controls & Sound (التحكم ومحرك الصوت)
-* **On Screen:** Keyboard layout (Arrows, Space, P, M, Q, F) and audio channels.
-* **🎤 What Jomana says (In Simple English):**  
-  > “The controls are super easy on any laptop keyboard, with exciting sound effects for engine revs, crash bumps, and victory chimes.”
-* **💡 نصيحة بالعربي:** أكّد على سهولة اللعب بالأسهم ومفتاح المسافة على أي لابتوب أو كمبيوتر مدرسي.
-
----
-
-## Slide 17: How We Built It — Python & Pygame (كيف برمجناها)
-* **On Screen:** Python 3, Pygame, PyInstaller (Turpo.exe 60MB), and Game Math.
+## Slide 17: Real Keyboard Controls & Exact Functions (أزرار وحروف الكيبورد الحقيقية ووظيفتها)
+* **On Screen:** 10 Real physical keyboard keys mapped with 3D keycaps:
+  - `←` & `→`: Steer Left & Right across 6 lanes (توجيه السيارة وتفادي الاصطدام)
+  - `SPACE`: Start Race & Next Quiz Question (بدء السباق والتالي في الاختبار)
+  - `P`: Pause & Freeze Game (تجميد اللعبة مؤقتاً)
+  - `R`: Instant Restart after Game Over (إعادة بدء سباق جديد فوراً)
+  - `ESC`: Close Garage / Pause (إغلاق المتجر أو الإيقاف المؤقت)
+  - `F`: Toggle Fullscreen Display (تكبير اللعبة لملء شاشة اللابتوب بالكامل)
+  - `H`: Instant Home Menu Return (الرجوع للقائمة الرئيسية من أي مكان)
+  - `Q`: Direct Shortcut to 20 Traffic Signs Quiz (اختصار مسابقة إشارات المرور الـ 20)
+  - `🖱️ Click`: Mouse Left Click for Quiz answers & Garage car purchases (نقرة الماوس لاختيار الإجابات وشراء السيارات)
+  - `M`: Instant Mute/Unmute for racing music & SFX (كتم وتشغيل أصوات وموسيقى اللعبة)
 * **🎤 What Ali says (In Simple English):**  
-  > “We built the game in Python and Pygame. Using PyInstaller, we turned it into a single 60-megabyte file that runs offline on any school PC without installing anything!”
-* **💡 نصيحة بالعربي:** نقطة قوة تقنية: اللعبة ملف واحد Turpo.exe يعمل بدون إنترنت ولا يحتاج تنصيب أي برنامج.
+  > “Every single key in Turbo has a clear job:
+  > • Arrow keys `[ ← ] [ → ]` steer your car across 6 lanes.
+  > • `[ SPACE ]` starts the race and moves to the next quiz question.
+  > • `[ P ]` pauses the game, and `[ R ]` gives you an instant restart.
+  > • `[ F ]` expands to Fullscreen, `[ H ]` goes Home, and `[ Q ]` opens the Traffic Quiz.
+  > • Plus mouse clicks to pick quiz answers and buy cars!”
+* **💡 نصيحة بالعربي:** شاور بإيدك على حروف الكيبورد على الشاشة ووضّح للحكام إن كل زرار في اللعبة متبرمج لغرض محدد وسهل جداً للأطفال الصغار.
 
 ---
 
 ## Slide 18: 20 Real Road Signs (بنك الإشارات المرورية)
 * **On Screen:** Interactive 20-sign grid with warning, regulatory, and prohibitory filters.
 * **🎤 What Jomana says (In Simple English):**  
-  > “We included 20 verified international and Egyptian road signs. You can filter by Warning, Regulatory, or Prohibitory, and click any sign to see its safety rule!”
+  > “We have 20 real road signs. You can click any sign to see its safety rule!”
 * **💡 نصيحة بالعربي:** اضغط على إشارة أو إشارتين أمام الحكام (مثل STOP أو School Zone) ليروا الشرح.
 
 ---
 
 ## Slide 19: Future Roadmap (خطة التطوير القادمة)
-* **On Screen:** 4-stage roadmap: Core PC Game, 50 Signs, Mobile Port, School Tournaments.
+* **On Screen:** 4-stage roadmap: PC Game, 50 Signs, Mobile Port, Schools.
 * **🎤 What Ali says (In Simple English):**  
-  > “Our next step is bringing Turbo to mobile phones, adding 50 new signs, and launching free tournaments in schools across Africa and Asia!”
+  > “Our next step is bringing Turbo to mobile phones, adding 50 new signs, and sharing the game with schools across Egypt!”
 * **💡 نصيحة بالعربي:** وضّح رؤيتكم للتوسع على الموبايل والمدارس مجاناً 100%.
 
 ---
 
 ## Slide 20: Closing Pitch (خاتمة العرض)
-* **On Screen:** Official Slogan, team photo, and restart button.
+* **On Screen:** Official Slogan, team names, and restart button.
 * **🎤 What Ali & Jomana say together (In Simple English):**  
-  > “Our mission is simple: **Play to Learn, Drive to Live!** With your mentorship and support, we can save lives. Thank you, judges, and thank you Afro-Asian Forum!”
+  > “Our mission is simple: **Play to Learn, Drive to Live!** With your support, we can keep kids safe. Thank you, judges, and thank you Afro-Asian Forum!”
 * **💡 نصيحة بالعربي:** اختموا معاً بصوت واثق ومبتسم، وأفسحوا المجال لأسئلة الحكام.
