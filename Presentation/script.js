@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("presentationContainer");
   const slides = Array.from(document.querySelectorAll(".slide-section"));
   const totalSlides = slides.length;
-  
+
   const slideCounter = document.getElementById("slideCounter");
   const progressBar = document.getElementById("globalProgressBar");
   const prevBtn = document.getElementById("prevSlideBtn");
@@ -53,13 +53,13 @@ document.addEventListener("DOMContentLoaded", () => {
       const dot = document.createElement("div");
       dot.className = `dot-nav-item ${idx === 0 ? "active" : ""}`;
       dot.setAttribute("data-slide", idx);
-      
+
       const title = slide.querySelector(".slide-title")?.innerText || slide.getAttribute("data-title") || `Slide ${idx + 1}`;
-      
+
       const tooltip = document.createElement("span");
       tooltip.className = "dot-tooltip";
       tooltip.textContent = `${String(idx + 1).padStart(2, "0")}. ${title.substring(0, 24)}`;
-      
+
       dot.appendChild(tooltip);
       dot.addEventListener("click", () => goToSlide(idx));
       dotNavContainer.appendChild(dot);
@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
     currentSlideIndex = index;
     const formatted = `${String(index + 1).padStart(2, "0")} / ${String(totalSlides).padStart(2, "0")}`;
     if (slideCounter) slideCounter.textContent = formatted;
-    
+
     if (progressBar) {
       const percent = ((index + 1) / totalSlides) * 100;
       progressBar.style.width = `${percent}%`;
@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Event Listeners for Nav Buttons
   if (prevBtn) prevBtn.addEventListener("click", prevSlide);
   if (nextBtn) nextBtn.addEventListener("click", nextSlide);
-  
+
   const bottomPrev = document.getElementById("bottomPrevBtn");
   const bottomNext = document.getElementById("bottomNextBtn");
   const bottomTop = document.getElementById("bottomTopBtn");
@@ -215,11 +215,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // Fullscreen Toggle
   function toggleFullscreen() {
     if (!document.fullscreenElement) {
-      document.documentElement.requestFullscreen().catch(() => {});
+      document.documentElement.requestFullscreen().catch(() => { });
       if (fullscreenBtn) fullscreenBtn.textContent = "Exit Fullscreen";
     } else {
       if (document.exitFullscreen) {
-        document.exitFullscreen().catch(() => {});
+        document.exitFullscreen().catch(() => { });
         if (fullscreenBtn) fullscreenBtn.textContent = "Fullscreen";
       }
     }
@@ -259,7 +259,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Lightbox for Game Screenshots
-  window.openScreenshotLightbox = function(src, caption) {
+  window.openScreenshotLightbox = function (src, caption) {
     const imgElem = document.getElementById("lightboxImg");
     const captionElem = document.getElementById("lightboxCaption");
     if (imgElem) imgElem.src = src;
@@ -275,8 +275,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!signsGrid) return;
     signsGrid.innerHTML = "";
 
-    const filtered = category === "all" 
-      ? TRAFFIC_SIGNS_DATA 
+    const filtered = category === "all"
+      ? TRAFFIC_SIGNS_DATA
       : TRAFFIC_SIGNS_DATA.filter(s => s.category === category);
 
     filtered.forEach(sign => {
@@ -329,7 +329,7 @@ document.addEventListener("DOMContentLoaded", () => {
     scoreSlider.addEventListener("input", (e) => {
       const score = parseInt(e.target.value, 10);
       const level = Math.min(Math.floor(score / 30) + 1, 6);
-      
+
       // Speed math from play_page.py
       let speed = 3.0;
       const step10 = Math.floor(score / 10);
@@ -343,12 +343,12 @@ document.addEventListener("DOMContentLoaded", () => {
       if (calcScoreVal) calcScoreVal.textContent = score;
       if (calcLevelVal) calcLevelVal.textContent = `Level ${level}`;
       if (calcSpeedVal) calcSpeedVal.textContent = `${speed.toFixed(1)} px/f`;
-      if (calcSpawnVal) calcSpawnVal.textContent = `${spawnDelay} frames (~${(spawnDelay/60).toFixed(2)}s)`;
+      if (calcSpawnVal) calcSpawnVal.textContent = `${spawnDelay} frames (~${(spawnDelay / 60).toFixed(2)}s)`;
     });
   }
 
   // Promo Video Global Helper Functions
-  window.togglePlayPromoVideo = function() {
+  window.togglePlayPromoVideo = function () {
     const video = document.getElementById("promoVideoPlayer");
     const btnText = document.getElementById("videoPlayBtnText");
     if (!video) return;
@@ -364,7 +364,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  window.toggleFullscreenPromoVideo = function() {
+  window.toggleFullscreenPromoVideo = function () {
     const video = document.getElementById("promoVideoPlayer");
     if (!video) return;
     if (video.requestFullscreen) {
